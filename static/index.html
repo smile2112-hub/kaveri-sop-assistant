@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaveri Plant Copilot</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">KAVERI PRECISION COMPONENTS · HOSUR PLANT</p>
+      <h1>Plant Copilot</h1>
+      <p class="subtitle">Ask a question about maintenance, quality, or safety procedures.</p>
+    </header>
+    <section class="card">
+      <form id="ask-form">
+        <label for="question">What do you need to know?</label>
+        <div class="ask-row">
+          <input id="question" name="question" autocomplete="off" placeholder="e.g. What does alarm AL-104 mean?" required>
+          <button type="submit">Ask</button>
+        </div>
+      </form>
+      <div class="suggestions">
+        <button type="button" data-question="What is the recommended coolant concentration for the TX-200 CNC turning centre?">Coolant concentration</button>
+        <button type="button" data-question="Who is allowed to remove a lockout lock from a machine?">Lock removal</button>
+        <button type="button" data-question="What is the outer diameter tolerance for the BH-220 bearing housing?">BH-220 tolerance</button>
+      </div>
+    </section>
+    <section id="result" class="card result hidden" aria-live="polite"></section>
+    <p class="notice">Use this copilot as a document lookup aid. For urgent safety decisions, follow the current controlled QMS copy and contact your supervisor.</p>
+  </main>
+  <script>
+    const form = document.querySelector("#ask-form");
+    const input = document.querySelector("#question");
+    const result = document.querySelector("#result");
+    const escapeHtml = (value) => value.replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[char]));
+    async function ask(question) {
+      input.value = question;
+      result.classList.remove("hidden");
+      result.innerHTML = "<p class='loading'>Searching controlled documents…</p>";
+      try {
+        const response = await fetch(`/api/ask?question=${encodeURIComponent(question)}`);
+        const data = await response.json();
+        const source = data.source ? `<span class="source">Source: ${escapeHtml(data.source)}</span>` : "<span class='source missing'>No document source found</span>";
+        result.innerHTML = `<h2>Answer</h2><p class="answer">${escapeHtml(data.answer).replace(/\n/g, "<br>")}</p>${source}`;
+      } catch (error) {
+        result.innerHTML = "<p class='error'>The copilot could not be reached. Check that the server is running.</p>";
+      }
+    }
+    form.addEventListener("submit", (event) => { event.preventDefault(); ask(input.value.trim()); });
+    document.querySelectorAll("[data-question]").forEach((button) => button.addEventListener("click", () => ask(button.dataset.question)));
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+Kaveri Precision Components Pvt. Ltd. - Hosur Plant
+Preventive Maintenance Manual - TX-200 CNC Turning Centre
+Document No. MNT-MAN-CNC-02 Revision 02
+
+The manual covers TX-200 machines CNC-04 to CNC-09. Before maintenance other than daily operator checks, isolate the machine under SAF-SOP-003. Never open an electrical cabinet or hydraulic circuit on a running or energised machine.
+
+Normal operating parameters: hydraulic pressure 3.5-4.0 MPa; chuck clamping pressure 2.0-2.5 MPa; coolant concentration 6-8 percent measured with a refractometer (factor 1.0); coolant tank between MIN and MAX; way lube oil ISO VG 68; spindle runout at chuck face 0.005 mm maximum; compressed air 5.5-6.5 bar.
+
+Maintenance schedule: operators check hydraulic pressure, coolant level, way lube, air pressure and slideways daily. Operators check coolant concentration, clean the coolant tank filter and check chuck jaw wear weekly. A maintenance technician checks spindle runout monthly, along with hydraulic hoses and the electrical cabinet fan filter. The maintenance technician performs quarterly filter, turret alignment and backlash checks. The maintenance engineer performs yearly hydraulic oil replacement, geometric accuracy check and coolant replacement.
+
+Common alarms: AL-101 means hydraulic pressure low; stop the cycle and check oil level and gauge, then call maintenance if below 3.5 MPa. AL-104 means way lube oil level low; top up with ISO VG 68 oil to MAX and press RESET; the machine can continue after reset. AL-210 means chuck clamp not confirmed; do not start and check pressure and part seating. AL-305 means spindle overload; stop, check tool wear and cutting parameters, and inform the shift supervisor. AL-412 means coolant level low; top up coolant mixed to 6-8 percent.

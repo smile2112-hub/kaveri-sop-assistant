@@ -1,0 +1,13 @@
+Kaveri Precision Components Pvt. Ltd. - Hosur Plant
+Lockout / Tagout (LOTO) - Safety Procedure
+Document No. SAF-SOP-003 Revision 05
+
+Purpose: Protect people from unexpected machine start-up or release of stored energy during maintenance, cleaning, setting or repair. The procedure applies to employees and contract workers maintaining, cleaning or repairing machines.
+
+An authorised person is a trained employee who applies their own personal lock and tag to isolate energy. An affected person works in the area but does not perform isolation.
+
+Lock removal: check that tools and materials are removed, guards are refitted, and all people are clear. Each authorised person removes only their own lock. Nobody may remove another person's lock. Affected people must be informed before restart.
+
+If an authorised person has left the plant with their lock on, the Shift Supervisor must try to contact the owner. If the owner cannot be reached, both the Production Manager and Safety Officer must authorise removal. The machine must be inspected, removal recorded on form SF-12, and the owner informed before their next shift.
+
+All authorised persons need LOTO training before applying locks and refresher training every 12 months. The Safety Officer audits LOTO practice on each shift at least monthly.

@@ -1,0 +1,14 @@
+Kaveri Precision Components Pvt. Ltd. - Hosur Plant
+Incoming Material Inspection - Standard Operating Procedure
+Document No. QC-SOP-014 Revision 04
+Effective Date: 01-Jul-2026
+
+This revision supersedes Revision 03. It covers steel bar stock, castings, forgings, bought-out components, and machined BH-220 bearing housings from subcontractors.
+
+Responsibilities: the Stores Executive receives the lot and raises an inspection request in the QMS app. The QC Inspector performs sampling, visual and dimensional inspection and records results in the QMS app. The Shift QC Supervisor approves acceptance, rejection or hold. The Supplier Quality Engineer handles supplier communication.
+
+The supplier Material Test Certificate (MTC) is mandatory. If missing, put the lot on HOLD; do not inspect or accept it until the MTC arrives. Samples are random: lot size 2-5 means all pieces; 6-90 means 5; 91-500 means 13; 501-3,200 means 32; above 3,200 means 50. Any critical defect rejects the complete lot. Any major defect rejects the complete lot.
+
+For BH-220 bearing housings, the outer diameter is 90.000 +/- 0.050 mm and is checked with a digital caliper. Bore diameter is 52.000 +0.030/-0.000 mm (CMM, critical). Overall height is 38.00 +/- 0.10 mm. Mounting hole PCD is 72.00 +/- 0.05 mm (CMM, critical).
+
+Record results in digital form QF-07A in the QMS app. Accepted material gets a GREEN tag and moves to stores. Rejected material moves to locked Quarantine Cage Q1, Stores Bay 3. The Shift QC Supervisor informs the SQE within 4 hours of rejection.
