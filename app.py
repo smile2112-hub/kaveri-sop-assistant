@@ -9,7 +9,8 @@ from fastapi import FastAPI, Query
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
-
+#maheshkajale2112@gmail.com
+#Mahesh Ganesh Kajale
 ROOT = Path(__file__).parent
 DOCUMENTS = ROOT / "documents"
 STATIC = ROOT / "static"
@@ -31,7 +32,8 @@ def terms(text: str) -> frozenset[str]:
         word for word in re.findall(r"[a-z0-9][a-z0-9-]+", text.lower()) if word not in STOP_WORDS
     )
 
-
+#maheshkajale2112@gmail.com
+#Mahesh Ganesh Kajale
 def read_document(path: Path) -> str:
     if path.suffix.lower() == ".pdf":
         try:
@@ -105,7 +107,8 @@ def answer_question(question: str, chunks: list[Chunk] | None = None) -> dict:
         "confidence": "document match",
     }
 
-
+#maheshkajale2112@gmail.com
+#Mahesh Ganesh Kajale
 app = FastAPI(title="Kaveri Plant Copilot", version="1.0.0")
 app.mount("/static", StaticFiles(directory=STATIC), name="static")
 
