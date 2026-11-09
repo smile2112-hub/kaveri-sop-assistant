@@ -110,6 +110,19 @@ These are the expected answers from the current source documents:
 | How frequently are LOTO refreshers required? | Every **12 months** for authorised persons. Source: `01_loto_safety.txt`. |
 | What is the cafeteria menu on Friday? | **Not found in the plant documents.** The app says it cannot answer instead of guessing and shows no source. |
 
+
+
+
+
+
 ## Design note
 
 The retrieval implementation is intentionally small and inspectable for this assignment: it tokenizes paragraphs, ranks them by query-term overlap, and applies a conservative threshold. This is not a production-grade semantic RAG system. A production version should use a proper embedding index, document version/ACL filtering, audit logging, and a model constrained to retrieved passages. See [THINKING.md](./THINKING.md) for the user journey, critique, chosen improvement, and open questions.
+
+
+
+
+
+
+Live Demo Link
+https://drive.google.com/file/d/1hPKiSK7TZVCgCesXdcz_C0Ck2cL0F2gK/view?usp=drive_link
